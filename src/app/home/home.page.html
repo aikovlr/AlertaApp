@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-content style="--background: #fff;">
+  
+<ion-header>
+  <ion-toolbar class="header">
     <ion-title>
-      Blank
+      P1 Mobile
     </ion-title>
   </ion-toolbar>
 </ion-header>
+ 
+  <p>Este app é um app feito para a prova P1 de programação mobile. Clique nos botões abaixo para ver como funciona a aplicação.</p>
+  
+  <ion-button color="danger" expand="full" (clicl)="showAlert()">
+    Alerta de GPS
+  </ion-button>
+  
+  <div id="map"></div>
+  
+  <!-- Botão que chama a função showAlert() --> 
+  <ion-button color="success" expand="full" (click)="showExplanation()"> 
+    Como funciona o mapa?
+  </ion-button> 
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-button color="primary" expand="full" (click)="findRestaurant()">
+    Buscar restaurantes próximos
+  </ion-button>
+  
+  </ion-content> 
