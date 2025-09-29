@@ -10,7 +10,7 @@
  
   <p>Este app é um app feito para a prova P1 de programação mobile. Clique nos botões abaixo para ver como funciona a aplicação.</p>
   
-  <ion-button color="danger" expand="full" (clicl)="showAlert()">
+  <ion-button color="danger" expand="full" (click)="showAlert()" [hidden]="isGeolocationAvailable">
     Alerta de GPS
   </ion-button>
   
@@ -24,5 +24,8 @@
   <ion-button color="primary" expand="full" (click)="findRestaurant()">
     Buscar restaurantes próximos
   </ion-button>
+
+  <p><b>OBS:</b> só é possivel conceder permissão de localização em localhost, caso tente acessar através do host externo (ip), a localização não pode ser concedida por questões de segurança http.
+  <br/>Se sua localização já está ativa, também recomendo desativar e dar F5 para ver algo interessante :) </p>
   
   </ion-content> 
